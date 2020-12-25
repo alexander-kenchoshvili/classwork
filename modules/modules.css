@@ -1,6 +1,10 @@
+.wrapper {
+  width: 100%;
+}
+
 .wrapper .menu-section {
   background-color: #002245;
-  width: 350px;
+  width: 25%;
   height: 660px;
   position: fixed;
   display: -webkit-box;
@@ -11,9 +15,15 @@
           justify-content: center;
 }
 
+@media only screen and (max-width: 1200px) {
+  .wrapper .menu-section {
+    display: none;
+  }
+}
+
 .wrapper .menu-section .side-bar {
   padding-top: 50px;
-  width: 260px;
+  width: 50%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -83,8 +93,8 @@
 }
 
 .wrapper .content {
-  width: 999px;
-  margin-left: 350px;
+  width: 100%;
+  padding-left: 25%;
 }
 
 .wrapper .content .freelancer {
@@ -168,27 +178,37 @@
 
 .wrapper .content .about-section {
   padding-top: 70px;
+  padding-bottom: 70px;
+}
+
+.wrapper .content .about-section .about-items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .wrapper .content .about-section .about-items .about-head {
-  width: 215px;
+  width: 25%;
 }
 
 .wrapper .content .about-section .about-items .about-head span {
+  width: 25%;
   font-family: sans-serif;
-  color: #ff9800;
+  color: #ffaf3b;
 }
 
 .wrapper .content .about-section .about-items .about-head h2 {
-  font-family: sans-serif;
-  font-weight: bold;
-  font-size: 35px;
   margin-top: 20px;
+  font-family: sans-serif;
+  font-size: 35px;
 }
 
-.wrapper .content .about-section .about-items .developer {
+.wrapper .content .about-section .about-items .about-info {
   width: 100%;
-  margin-top: 70px;
+  height: 625px;
+  margin-top: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -197,57 +217,264 @@
           justify-content: space-between;
 }
 
-.wrapper .content .about-section .about-items .developer .developer-photo-space {
-  width: 335px;
-  height: 415px;
+.wrapper .content .about-section .about-items .about-info .photo-space {
+  width: 340px;
+  height: 405px;
   position: relative;
 }
 
-.wrapper .content .about-section .about-items .developer .developer-photo-space .developer-photo {
-  width: 325px;
-  height: 380px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 2;
-}
-
-.wrapper .content .about-section .about-items .developer .developer-photo-space .developer-photo img {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
-.wrapper .content .about-section .about-items .developer .developer-photo-space .frame {
+.wrapper .content .about-section .about-items .about-info .photo-space .frame {
   width: 325px;
   height: 380px;
   background-color: white;
   border: 10px solid black;
   position: absolute;
-  right: 0;
   bottom: 0;
+  right: 0;
   z-index: 1;
+  border-radius: 5px;
 }
 
-.wrapper .content .about-section .about-items .developer .developer-info {
-  width: 510px;
+.wrapper .content .about-section .about-items .about-info .photo-space .photo {
+  width: 300px;
+  height: 380px;
+  z-index: 2;
+  position: absolute;
 }
 
-.wrapper .content .about-section .about-items .developer .developer-info h3 {
-  font-family: sans-serif;
-}
-
-.wrapper .content .about-section .about-items .developer .developer-info p {
-  font-family: sans-serif;
-  line-height: 45px;
-  font-size: 18px;
-  margin-top: 30px;
-  color: #676767;
-}
-
-.wrapper .content .about-section .about-items .developer .developer-info .contact {
+.wrapper .content .about-section .about-items .about-info .photo-space .photo img {
   width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+
+.wrapper .content .about-section .about-items .about-info .information {
+  width: 515px;
+  height: 625px;
+}
+
+.wrapper .content .about-section .about-items .about-info .information h3 {
+  font-family: sans-serif;
+}
+
+.wrapper .content .about-section .about-items .about-info .information h3 .head-name {
+  color: #ff9800;
+}
+
+.wrapper .content .about-section .about-items .about-info .information p {
+  font-family: sans-serif;
+  line-height: 35px;
+  font-size: 18px;
+  color: #989898;
+  margin-top: 30px;
+}
+
+.wrapper .content .about-section .about-items .about-info .information p .head-name {
+  color: #ff9800;
+}
+
+.wrapper .content .about-section .about-items .about-info .information .details {
+  width: 100%;
+  height: 230px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+.wrapper .content .about-section .about-items .about-info .information .details .fast-info {
+  width: 45%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.wrapper .content .about-section .about-items .about-info .information .details .fast-info h4 {
+  margin-left: 5px;
+  font-family: sans-serif;
+}
+
+.wrapper .content .about-section .about-items .about-info .information .details .fast-info .long {
+  margin-left: 20px;
+}
+
+.wrapper .content .about-section .about-items .about-info .information .details .fast-info a {
+  text-decoration: none;
+  margin-left: 5px;
+  color: #626060;
+}
+
+.wrapper .content .about-section .about-items .about-info .information .details .fast-info i {
+  color: #ff9800;
+}
+
+.wrapper .content .about-section .about-items .about-info .information .details .fast-info span {
+  margin-left: 5px;
+  font-family: sans-serif;
+}
+
+.wrapper .content .about-section .about-items .about-info .information .buttons {
+  width: 445px;
+  height: 55px;
+  margin-top: 50px;
+}
+
+.wrapper .content .about-section .about-items .about-info .information .buttons button {
+  width: 205px;
+  height: 53px;
+  background-color: #ff9800;
+  cursor: pointer;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  font-family: sans-serif;
+  border-radius: 10px;
+  outline: none;
+  border: none;
+  margin: 0 5px;
+}
+
+.wrapper .content .card-section {
+  width: 100%;
+  background-color: #f9f9f9;
+  padding-top: 70px;
+  padding-bottom: 70px;
+}
+
+.wrapper .content .card-section .card-items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.wrapper .content .card-section .card-items .card-head {
+  width: 25%;
+}
+
+.wrapper .content .card-section .card-items .card-head span {
+  width: 25%;
+  font-family: sans-serif;
+  color: #ffaf3b;
+}
+
+.wrapper .content .card-section .card-items .card-head h2 {
+  margin-top: 20px;
+  font-family: sans-serif;
+  font-size: 35px;
+}
+
+.wrapper .content .card-section .card-items .card-item {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-top: 50px;
+}
+
+.wrapper .content .card-section .card-items .card-item .cards {
+  width: 275px;
+  height: 400px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: white;
+  margin: 30px 0;
+}
+
+.wrapper .content .card-section .card-items .card-item .cards .card-content {
+  width: 200px;
+  height: 290px;
+}
+
+.wrapper .content .card-section .card-items .card-item .cards .card-content i {
+  font-size: 45px;
+  color: orange;
+}
+
+.wrapper .content .card-section .card-items .card-item .cards .card-content h3 {
+  font-family: sans-serif;
+  font-size: 22px;
+  margin-top: 30px;
+  color: #2f2f2f;
+}
+
+.wrapper .content .card-section .card-items .card-item .cards .card-content p {
+  font-family: sans-serif;
+  color: #8f8f8f;
+  margin-top: 30px;
+  line-height: 35px;
+  font-size: 19px;
+}
+
+.wrapper .content .card-section .card-items .card-describtion {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 70px;
+}
+
+.wrapper .content .card-section .card-items .card-describtion .main-text {
+  width: 415px;
+  height: 270px;
+}
+
+.wrapper .content .card-section .card-items .card-describtion .main-text h3 {
+  font-family: sans-serif;
+  font-size: 22px;
+  line-height: 30px;
+}
+
+.wrapper .content .card-section .card-items .card-describtion .main-text span {
+  color: #ff9800;
+}
+
+.wrapper .content .card-section .card-items .card-describtion .main-text p {
+  font-family: sans-serif;
+  line-height: 30px;
+  margin-top: 30px;
+  font-size: 19px;
+  color: #656464;
+}
+
+.wrapper .content .card-section .card-items .card-describtion .chart {
+  width: 440px;
+  height: 200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.wrapper .content .card-section .card-items .card-describtion .chart .chart-inner {
+  width: 100%;
+  height: 35px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -258,31 +485,39 @@
       flex-wrap: wrap;
 }
 
-.wrapper .content .about-section .about-items .developer .developer-info .contact .birthday {
-  width: 225px;
-}
-
-.wrapper .content .about-section .about-items .developer .developer-info .contact .birthday ul {
-  list-style-type: none;
-}
-
-.wrapper .content .about-section .about-items .developer .developer-info .contact .birthday ul li {
-  margin: 20px 0;
+.wrapper .content .card-section .card-items .card-describtion .chart .chart-inner h4 {
   font-family: sans-serif;
-  font-size: 20px;
+  color: #656464;
 }
 
-.wrapper .content .about-section .about-items .developer .developer-info .contact .age {
-  width: 225px;
+.wrapper .content .card-section .card-items .card-describtion .chart .chart-inner .full-line {
+  width: 100%;
+  height: 10px;
+  background-color: black;
+  margin-top: 6px;
 }
 
-.wrapper .content .about-section .about-items .developer .developer-info .contact .age ul {
-  list-style-type: none;
+.wrapper .content .card-section .card-items .card-describtion .chart .chart-inner .full-line .development-line {
+  width: 95%;
+  height: 10px;
+  background-color: #ff9800;
 }
 
-.wrapper .content .about-section .about-items .developer .developer-info .contact .age ul li {
-  margin: 20px 0;
-  font-family: sans-serif;
-  font-size: 20px;
+.wrapper .content .card-section .card-items .card-describtion .chart .chart-inner .full-line .brand-line {
+  width: 80%;
+  height: 10px;
+  background-color: #ff9800;
+}
+
+.wrapper .content .card-section .card-items .card-describtion .chart .chart-inner .full-line .java-line {
+  width: 90%;
+  height: 10px;
+  background-color: #ff9800;
+}
+
+.wrapper .content .card-section .card-items .card-describtion .chart .chart-inner .full-line .wordpress-line {
+  width: 85%;
+  height: 10px;
+  background-color: #ff9800;
 }
 /*# sourceMappingURL=modules.css.map */
